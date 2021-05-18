@@ -2,37 +2,54 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 
- class Transaction extends Component {
-	 constructor(props) {
-		 super(props)
-		 this.state = {
-			  table:[]
-		 }
-	 }
-	 componentDidMount()
-	 {
-		 axios.get(`http://localhost:5000/constumerList/transactionget`)
-		 .then(response => {
-			console.log(response)
-			this.setState({
-				table: response.data,
+class Transaction extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			table: []
+		}
+	}
+	componentDidMount() {
+		axios.get(`http://localhost:5000/constumerList/transactionget`)
+			.then(response => {
+				console.log(response)
+				this.setState({
+					table: response.data,
+
+				})
+				console.log(this.state.table)
 
 			})
-			console.log(this.state.table)
+			.catch(error => {
+				console.log(error)
+			})
 
-		})
-		.catch(error => {
-			console.log(error)
-		})
-
-	 }
+	}
 
 	render() {
 		const { table } = this.state
 
 		return (
-			<div>
-              {table.map(t=><h1>{t.name1},{t.balance}</h1>)}
+			<div className="container">
+				<table class="table table-striped table-hover mt-3">
+					<thead >
+						<tr>
+							<th scope="col">Sender</th>
+							<th scope="col">Receiver</th>
+							<th scope="col">Amount</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						{table.map(t =>
+							<tr >
+								<td>{t.name1}</td>
+								<td>{t.name2}</td>
+								<td>{t.balance}</td>
+							</tr>)}
+					</tbody>
+				</table>
+
 			</div>
 		)
 	}
