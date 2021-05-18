@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { MDBInput, MDBContainer, MDBRow, MDBCol, MDBBtn }  from "mdbreact";
 
 class Transfer extends Component {
 	constructor(props) {
@@ -28,7 +29,7 @@ class Transfer extends Component {
 	submitHandler = (e) => {
 
 
-		const { customer, balance1, id1, id2,name1,name2 } = this.state
+		const { customer, balance1, id1, id2, name1, name2 } = this.state
 		// console.log(id1)
 
 		// console.log(balance1)
@@ -44,7 +45,7 @@ class Transfer extends Component {
 		], [
 
 
-			axios.post(`http://localhost:5000/constumerList/transaction`,{name1:name1,name2:name2,balance:balance1})
+			axios.post(`http://localhost:5000/constumerList/transaction`, { name1: name1, name2: name2, balance: balance1 })
 				.then((response) => {
 					console.log(response)
 				})
@@ -61,17 +62,26 @@ class Transfer extends Component {
 		const { customer, balance1, name1, name2, id1, id2 } = this.state
 		//console.log(customer)
 		return (
-			<div>
+			<MDBContainer>
+				<MDBRow>
+					<MDBCol md="6" className="offset-md-3 mt-3" >
+						<form onSubmit={this.submitHandler}>
+						<h1>Transfer Form</h1>
+						<MDBInput label="Senders Name" name="name1" value={name1} onChange={this.handleChange} />
+						<MDBInput label="Receiver Name" name="name2" value={name2} onChange={this.handleChange} />
+						<MDBInput label="Sender's Id" name="id1" value={id1} onChange={this.handleChange} />
+						<MDBInput label="Receiver's Id" name="id2" value={id2} onChange={this.handleChange} />
+						<MDBInput label="Amount" name="balance1" value={balance1} onChange={this.handleChange} />
+						<MDBBtn color="primary" type="submit">Transfer Money!</MDBBtn>
+						</form>
+
+					</MDBCol>
+
+				</MDBRow>
 				{/* {customer.map(c => <div>{c.name},{c.id}  {c.balance}</div>)} */}
-				<form onSubmit={this.submitHandler}>
-					<input type="number" name="id1" value={id1} onChange={this.handleChange} />
-					<input type="number" name="id2" value={id2} onChange={this.handleChange} />
-					<input type="text" name="name1" value={name1} onChange={this.handleChange} />
-					<input type="text" name="name2" value={name2} onChange={this.handleChange} />
-					<input type="number" name="balance1" value={balance1} onChange={this.handleChange} />
-					<button type="submit">click me!</button>
-				</form>
-			</div>
+
+
+			</MDBContainer>
 		)
 	}
 }
