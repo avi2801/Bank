@@ -1,0 +1,25 @@
+.background {
+	background-color: #0d47a1 !important;
+	opacity: 0.8;
+}
+
+.links {
+	color: #fcf9f9;
+
+}
+
+.links:hover
+{
+	/* background-color:#8d8db3 !important; */
+	color: #f6f7f4;
+
+}
+.navbar-brand
+{
+	margin-left:10px !important;
+}
+
+.nav-link
+{
+	color:rgb(250, 246, 246) !important;
+}

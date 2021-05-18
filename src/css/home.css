@@ -1,0 +1,43 @@
+/* .first {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.bg {
+	background-image: url('../assets/logo1.jpg');
+	height: 240px;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	;
+
+}
+
+.border {
+	border: 1px solid rgb(150, 132, 132);
+	box-shadow: -11px 13px 31px -3px rgba(0, 0, 0, 0.68);
+	-webkit-box-shadow: -11px 13px 31px -3px rgba(0, 0, 0, 0.68);
+	-moz-box-shadow: -11px 13px 31px -3px rgba(0, 0, 0, 0.68);
+} */
+
+body
+{
+	background-color: #eeeeee !important;
+}
+.text h1
+{
+
+	color:#004d40;
+	font-weight: 400;
+}
+.title{
+	color:#021411;
+	font-weight: 400;
+	text-align: center;
+	font-style: italic;
+	text-decoration: underline;
+
+
+}
