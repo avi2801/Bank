@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {MDBAnimation} from 'mdbreact'
 
 
 class Transaction extends Component {
@@ -30,6 +31,7 @@ class Transaction extends Component {
 		const { table } = this.state
 
 		return (
+			<MDBAnimation type="slideInRight" duration='2s'>
 			<div className="container mt-3">
 				<h2>Transaction History</h2>
 				<table class="table table-striped table-hover mt-3">
@@ -52,6 +54,7 @@ class Transaction extends Component {
 				</table>
 
 			</div>
+			</MDBAnimation>
 		)
 	}
 }

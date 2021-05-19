@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { MDBInput, MDBContainer, MDBRow, MDBCol, MDBBtn, }  from "mdbreact";
+import { MDBInput, MDBContainer, MDBRow, MDBCol, MDBBtn,MDBAnimation }  from "mdbreact";
 import history from '../history'
+
 
 class Transfer extends Component {
 	constructor(props) {
@@ -63,6 +64,7 @@ class Transfer extends Component {
 		const { customer, balance1, name1, name2, id1, id2 } = this.state
 		//console.log(customer)
 		return (
+			<MDBAnimation type='bounceIn' duration='2s'>
 			<MDBContainer>
 				<MDBRow>
 					<MDBCol md="6" className="offset-md-3 mt-3" >
@@ -82,9 +84,8 @@ class Transfer extends Component {
 
 				</MDBRow>
 				{/* {customer.map(c => <div>{c.name},{c.id}  {c.balance}</div>)} */}
-
-
 			</MDBContainer>
+			</MDBAnimation>
 		)
 	}
 }
