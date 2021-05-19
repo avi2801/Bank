@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { MDBInput, MDBBtn, MDBAnimation } from "mdbreact";
-import history from '../history'
+// import history from '../history'
 import AboutUs from './AboutUs'
-import { Route, Link, BrowserRouter } from 'react-router-dom'
+// import { Route, Link, BrowserRouter } from 'react-router-dom'
 
 class About extends Component {
 	constructor(props) {
@@ -65,8 +65,6 @@ class About extends Component {
 
 
 		}
-
-
 	}
 }
 

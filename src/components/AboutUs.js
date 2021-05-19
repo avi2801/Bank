@@ -25,7 +25,7 @@ export class AboutUs extends Component {
 	}
 
 	render() {
-		const { user, id } = this.state
+		const { user} = this.state
 		return (
 			<MDBAnimation type='rollIn' duration='2s'>
 				<div>
@@ -35,7 +35,6 @@ export class AboutUs extends Component {
 							<MDBCardText>
 								<div>
 									<h5>Name: {user.name} {user.last}</h5>
-
 								</div>
 							</MDBCardText>
 							<MDBCardText>

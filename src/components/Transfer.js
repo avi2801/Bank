@@ -31,7 +31,7 @@ class Transfer extends Component {
 	submitHandler = (e) => {
 
 
-		const { customer, balance1, id1, id2, name1, name2 } = this.state
+		const { balance1, id1, id2, name1, name2 } = this.state
 		// console.log(id1)
 
 		// console.log(balance1)
@@ -61,7 +61,7 @@ class Transfer extends Component {
 
 
 	render() {
-		const { customer, balance1, name1, name2, id1, id2 } = this.state
+		const { balance1, name1, name2, id1, id2 } = this.state
 		//console.log(customer)
 		return (
 			<MDBAnimation type='bounceIn' duration='2s'>

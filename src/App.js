@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import { Route, Link, BrowserRouter } from 'react-router-dom'
-import logo from './logo.svg';
+import { Route,  BrowserRouter } from 'react-router-dom'
 import './App.css';
 import './css/navbar.css'
 import './css/customer.css'
@@ -13,7 +12,6 @@ import Navbar1 from './components/Navbar'
 import About from './components/About'
 import AboutUs from './components/AboutUs'
 import history from './history'
-
 import Transaction from './components/Transaction';
 
 class App extends Component {
@@ -23,9 +21,6 @@ class App extends Component {
 		this.state = {
 			customer: [],
 			i:0,
-
-
-
 		}
 	}
 	componentDidMount() {
@@ -55,12 +50,9 @@ class App extends Component {
           <Route path="/Transaction" component={()=><Transfer customer={this.state.customer}/>} />
           <Route path="/ConstumerList" component={CustomerList} />
 		  <Route path="/table" component={Transaction}/>
-
         </div>
       </BrowserRouter >
     )
   }
-
 }
-
 export default App;

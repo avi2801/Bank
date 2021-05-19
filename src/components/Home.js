@@ -1,7 +1,7 @@
 import React from 'react'
 // import Navbar1 from './Navbar'
 import logo1 from '../assets/logo1.jpg'
-import { MDBAnimation, MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBAnimation, MDBFooter } from "mdbreact";
 
 function Home() {
 	return (
@@ -50,7 +50,7 @@ function Home() {
 			</div>
 
 			<MDBFooter color="unique-color-dark" className="page-footer font-small pt-0">
-			  
+
 			</MDBFooter>
 		</div>
 

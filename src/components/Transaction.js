@@ -29,7 +29,6 @@ class Transaction extends Component {
 
 	render() {
 		const { table } = this.state
-
 		return (
 			<MDBAnimation type="slideInRight" duration='2s'>
 			<div className="container mt-3">
@@ -40,7 +39,6 @@ class Transaction extends Component {
 							<th scope="col">Sender</th>
 							<th scope="col">Receiver</th>
 							<th scope="col">Amount</th>
-
 						</tr>
 					</thead>
 					<tbody>
@@ -52,7 +50,6 @@ class Transaction extends Component {
 							</tr>)}
 					</tbody>
 				</table>
-
 			</div>
 			</MDBAnimation>
 		)

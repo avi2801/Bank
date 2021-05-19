@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import Navbar1 from './Navbar'
+// import Navbar1 from './Navbar'
 import { MDBAnimation } from 'mdbreact'
 
 
@@ -36,7 +36,7 @@ class CostumerList extends Component {
 
 
 	render() {
-		const { customer, isOpen } = this.state
+		const { customer} = this.state
 		return (
 			<MDBAnimation type='slideInDown' duration='2s'>
 				<div className="container">
