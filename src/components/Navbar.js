@@ -20,7 +20,7 @@ const Navbar1 = (props) => {
 					<Collapse isOpen={isOpen} navbar></Collapse>
 					<Nav >
 						<NavItem>
-						<NavLink className="links" href="/AboutUs">About Us!</NavLink>
+						<NavLink className="links" href="/about">About Us!</NavLink>
 						</NavItem>
 						<NavItem>
 							<NavLink className="links" href="/ConstumerList">Customer-Lists</NavLink>

@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function AboutUs() {
-	return (
-		<div className='container'>
-			<div className='row'>
-				<div className='col-sm-8 align-center'>
-					<h5>Still Working On it!</h5>
 
-				</div>
+export class AboutUs extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {
+			 id:this.props.id1
+		}
+		console.log(this.props.id1)
+	}
+
+	render() {
+		return (
+			<div>
+				<h1>{this.state.id}</h1>
+				
 
 			</div>
-
-		</div>
-	)
+		)
+	}
 }
 
-export default AboutUs;
+export default AboutUs

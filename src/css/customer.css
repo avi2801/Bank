@@ -6,3 +6,10 @@ thead{
 	 color:#004d40;
 	 font-weight: 300;
  }
+
+.temp a
+ {
+	 color:green !important;
+	 font-weight: 400 !important;
+	 font-size: large !important;
+ }

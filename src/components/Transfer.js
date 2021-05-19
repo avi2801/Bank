@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { MDBInput, MDBContainer, MDBRow, MDBCol, MDBBtn }  from "mdbreact";
+import { MDBInput, MDBContainer, MDBRow, MDBCol, MDBBtn, }  from "mdbreact";
+import history from '../history'
 
 class Transfer extends Component {
 	constructor(props) {
@@ -67,12 +68,14 @@ class Transfer extends Component {
 					<MDBCol md="6" className="offset-md-3 mt-3" >
 						<form onSubmit={this.submitHandler}>
 						<h1>Transfer Form</h1>
-						<MDBInput label="Senders Name" name="name1" value={name1} onChange={this.handleChange} />
-						<MDBInput label="Receiver Name" name="name2" value={name2} onChange={this.handleChange} />
-						<MDBInput label="Sender's Id" name="id1" value={id1} onChange={this.handleChange} />
-						<MDBInput label="Receiver's Id" name="id2" value={id2} onChange={this.handleChange} />
+						<MDBInput label="Sender's Name" name="name1"
+						value={name1}
+						onChange={this.handleChange} />
+						<MDBInput label="Receiver's Name" name="name2" value={name2} onChange={this.handleChange} />
+						<MDBInput label="Sender's id" name="id1" value={id1} onChange={this.handleChange} />
+						<MDBInput label="Receiver's id" name="id2" value={id2} onChange={this.handleChange} />
 						<MDBInput label="Amount" name="balance1" value={balance1} onChange={this.handleChange} />
-						<MDBBtn color="primary" type="submit">Transfer Money!</MDBBtn>
+						<MDBBtn color="primary" type="submit" onClick={() => history.push('/table')}>Transfer Money!</MDBBtn>
 						</form>
 
 					</MDBCol>

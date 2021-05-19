@@ -30,7 +30,8 @@ class Transaction extends Component {
 		const { table } = this.state
 
 		return (
-			<div className="container">
+			<div className="container mt-3">
+				<h2>Transaction History</h2>
 				<table class="table table-striped table-hover mt-3">
 					<thead >
 						<tr>

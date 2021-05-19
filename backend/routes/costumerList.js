@@ -17,6 +17,14 @@ router.route('/transactionget').get((req, res) => {
 		.catch(err => res.status(400).json('Error' + err))
 })
 
+router.route('/about:id').get( async(req,res)=>{
+await costumerList.findOne({ id: req.params.id })
+.then((user)=>res.json(user))
+.catch(err=>res.status(400).json('Error'+err))
+
+
+})
+
 router.route('/add').post((req, res) => {
 
 	const id = req.body.id
