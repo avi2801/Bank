@@ -47,7 +47,7 @@ class Transfer extends Component {
 		], [
 
 
-			axios.post(`http://localhost:5000/constumerList/transaction`, { name1: name1, name2: name2, balance: balance1 })
+			axios.post(`https://backend2801.herokuapp.com/constumerList/transaction`, { name1: name1, name2: name2, balance: balance1 })
 				.then((response) => {
 					console.log(response)
 				})
