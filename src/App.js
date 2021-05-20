@@ -40,10 +40,10 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter history={history}>
-        <div>
+        <div className='container'>
           <Navbar1 />
         </div>
-        <div >
+        <div className='container' >
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
 		  <Route path="/aboutus" component={AboutUs} />

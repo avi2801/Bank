@@ -10,7 +10,7 @@ const Navbar1 = (props) => {
 
 	const toggle = () => setIsOpen(!isOpen);
 	return (
-		<div >
+		<div className='container'>
 			<Navbar className="background" light-expand="md">
 				<NavbarBrand className="links ml-13" href="/">
 					<img src={logo} width="30" height="30" class="d-inline-block align-top " alt=""/>
