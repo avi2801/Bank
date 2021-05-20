@@ -37,7 +37,7 @@ class About extends Component {
 
 				<div>
 					<div className='row mt-3'>
-						<div className=' offset-4 col-sm-4 '>
+						<div className='offset-2 col-6 offset-sm-4 col-sm-6"'>
 							<h3>Fill in the Required Details</h3>
 							<MDBAnimation type="slideInLeft" duration='2s'>
 								<form>

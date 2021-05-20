@@ -38,7 +38,6 @@ class CostumerList extends Component {
 	render() {
 		const { customer} = this.state
 		return (
-
 				<div className="container">
 					<div className='row mt-2'>
 						<h2>Beneficiary Details!</h2>
