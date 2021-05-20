@@ -36,7 +36,7 @@ class Transfer extends Component {
 
 		// console.log(balance1)
 		axios.all([
-			axios.put(`http://localhost:5000/constumerList/transaction${id1}`, {
+			axios.put(`https://backend2801.herokuapp.com/constumerList/transaction${id1}`, {
 				id2: id2,
 				balance: balance1,
 			})

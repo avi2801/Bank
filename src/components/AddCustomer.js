@@ -29,7 +29,7 @@ class AddCustomer extends Component {
 	submitHandler = e => {
 		e.preventDefault()
 		console.log(this.state)
-		axios.post(`http://localhost:5000/constumerList/add`, this.state)
+		axios.post(`https://backend2801.herokuapp.com/constumerList/add`, this.state)
 			.then(response => {
 				console.log(response)
 			})

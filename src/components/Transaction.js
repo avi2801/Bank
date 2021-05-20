@@ -11,7 +11,7 @@ class Transaction extends Component {
 		}
 	}
 	componentDidMount() {
-		axios.get(`http://localhost:5000/constumerList/transactionget`)
+		axios.get(`https://backend2801.herokuapp.com/constumerList/transactionget`)
 			.then(response => {
 				console.log(response)
 				this.setState({

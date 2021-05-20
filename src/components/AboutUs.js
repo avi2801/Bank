@@ -14,7 +14,7 @@ export class AboutUs extends Component {
 		console.log(this.props.id)
 	}
 	componentDidMount() {
-		axios.get(`http://localhost:5000/constumerList/about${this.state.id}`)
+		axios.get(`https://backend2801.herokuapp.com/constumerList/about${this.state.id}`)
 			.then(res => {
 				this.setState({
 					user: res.data

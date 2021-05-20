@@ -19,7 +19,7 @@ class CostumerList extends Component {
 	}
 
 	componentDidMount() {
-		axios.get(`http://localhost:5000/constumerList/`)
+		axios.get(`https://backend2801.herokuapp.com/constumerList/`)
 			.then(response => {
 				console.log(response)
 				this.setState({
