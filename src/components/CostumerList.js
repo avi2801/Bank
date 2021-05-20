@@ -38,7 +38,7 @@ class CostumerList extends Component {
 	render() {
 		const { customer} = this.state
 		return (
-			<MDBAnimation type='slideInDown' duration='2s'>
+
 				<div className="container">
 					<div className='row mt-2'>
 						<h2>Beneficiary Details!</h2>
@@ -47,6 +47,7 @@ class CostumerList extends Component {
 						</div>
 					</div>
 					{/* <Navbar1/> */}
+					<MDBAnimation type='slideInDown' duration='2s'>
 					<table class="table table-striped table-hover mt-3">
 						<thead >
 							<tr>
@@ -68,10 +69,9 @@ class CostumerList extends Component {
 								</tr>)}
 						</tbody>
 					</table>
-
-
+					</MDBAnimation>
 				</div>
-			</MDBAnimation>
+
 		)
 	}
 }

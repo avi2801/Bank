@@ -34,21 +34,23 @@ class About extends Component {
 		const { name1, id1, temp1 } = this.state
 		if (temp1 === false) {
 			return (
-				<MDBAnimation type="slideInLeft" duration='2s'>
-					<div>
-						<div className='row mt-3'>
-							<div className=' offset-4 col-sm-4 '>
-								<h3>Fill in the Required Details</h3>
+
+				<div>
+					<div className='row mt-3'>
+						<div className=' offset-4 col-sm-4 '>
+							<h3>Fill in the Required Details</h3>
+							<MDBAnimation type="slideInLeft" duration='2s'>
 								<form>
 									<MDBInput label="Customer'Id" name="id1" value={id1} onChange={this.handleChange} />
 									<MDBInput label="Customer's Name" name="name1" value={name1} onChange={this.handleChange} />
 									<MDBBtn color="primary" type="submit" onClick={this.changeTemp}>
 										Get Details</MDBBtn>
 								</form>
-							</div>
+							</MDBAnimation>
 						</div>
 					</div>
-				</MDBAnimation>
+				</div>
+
 			)
 		}
 		else {
