@@ -11,8 +11,8 @@ router.route('/').get((req, res) => {
 
 })
 
-router.route('/transactionget').get((req, res) => {
-	transaction.find()
+router.route('/transactionget').get(async (req, res) => {
+	await transaction.find()
 		.then((table) => res.json(table))
 		.catch(err => res.status(400).json('Error' + err))
 })
@@ -46,13 +46,15 @@ router.route('/add').post((req, res) => {
 		.catch((err) => res.json(err))
 })
 
-router.route('/transaction').post((req, res) => {
+router.route('/transaction').post(async (req, res, next) => {
 	const name1 = req.body.name1
+	const id1=req.body.id1
 	const name2 = req.body.name2
+	const id2=req.body.id2
 	const balance = req.body.balance
 
 	const trans = new transaction({
-		name1, name2, balance
+		name1, id1, name2, id2, balance
 	})
 	trans.save()
 		.then(() => res.json("transaction added"))
